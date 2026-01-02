@@ -19,7 +19,7 @@ public class ModbusServer implements Runnable {
     public void run() {
         ServerSocket ss;
         try {
-            ss = new ServerSocket(502);
+            ss = new ServerSocket(1502);
             while (true) {
                 node = ss.accept();
                 String time = new Timestamp(System.currentTimeMillis())
