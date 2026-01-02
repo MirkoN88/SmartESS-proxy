@@ -19,7 +19,7 @@ public class ModbusClient implements Runnable {
     public void run() {
         while (true) {
             try {
-                srv=new Socket(engine.realModbusServer,502);
+                srv=new Socket(engine.realModbusServer,1502);
                 String time = new Timestamp(System.currentTimeMillis()).toString();
                 System.out.println(time + " - Connected to server "
                         + srv.getInetAddress().getHostAddress());
